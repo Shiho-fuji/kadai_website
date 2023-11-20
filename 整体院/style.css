@@ -265,17 +265,30 @@ body{
     position: absolute;
     color: #E7EDD4;
     font-size: 134px;
-    top: 100px;
+    top: 150px;
     left: 0px;
     z-index: 0;
+  }
+  #course::before{
+    content: url(img/footer-topback.png);
+    left: 0;
+    top: -100px;
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    height: auto;
+    overflow: hidden;
   }
   .course-title{
     text-align: center;
     color: #468459;
+    margin-bottom: 20px;
   }
   .course-content{
+    font-size: 24px;
     text-align: center;
     color: #468459;
+    font-weight: bold;
   }
   .course-gp{
     margin: 50px 50px;
@@ -292,7 +305,7 @@ body{
     margin-top: 15px;
   }
   .course-list{
-    margin: 25px 0;
+    margin: 25px 30px;
   }
   .course-list1{
     margin-top: 15px;
@@ -309,7 +322,6 @@ body{
     display: block;
     text-decoration:none;
     color: #468459;
-    background-color: white;
     border: 1px solid #468459;
     margin: 30px auto;
     text-align: center;
@@ -329,12 +341,14 @@ body{
     font-weight: bold;
     text-align: center;
     color: #468459;
+    margin-bottom: 20px;
   }
   .kyaku-title-text{
     font-weight: bold;
     text-align: center;
     color: #468459;
     font-size: 24px;
+    margin-bottom: 50px;
   }
   .diagonal{
     padding: 0 10px;
@@ -345,14 +359,19 @@ body{
     justify-content: space-around;
   }
   .kyaku-voice{
-    width: 30%;
+    width: 25%;
   }
   .kyaku-voice-img{
     border-radius:50%;
+    margin: 0 auto;
   }
   .kyaku-name{
     font-weight: bold;
     color: #0c4324;
+    text-align: center;
+  }
+  .kyaku-comment{
+    text-align: center;
   }
   .kyaku-link{
     width: 178px;
@@ -387,7 +406,7 @@ body{
   .footer-title{
     text-align: center;
     color: #468459;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
   }
   .footer-gp{
     display: flex;
@@ -396,10 +415,14 @@ body{
   .footer-left{
     padding: 0 20px;
   }
-  .walk{
+  .footer-walk{
     color: #468459;
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .footer-address{
+    margin-bottom: 15px;
   }
   .footer-tel{
     color: #468459;
@@ -410,7 +433,8 @@ body{
     font-size: 17px;
   }
   .footer-table{
-    margin: 20px 0;
+    margin-top: 15px;
+    margin-bottom: 30px;
     width: 400px;
     height: 123px;
   }
@@ -438,7 +462,8 @@ body{
     z-index: 20;
     left: 0;
     right: 0;
-    margin: 50px;
+    margin: 30px;
+    margin-top: 70px;
   }
   .logo{
     width: 240px;
@@ -462,9 +487,12 @@ body{
     bottom: 0;
     left: 0;
     width: 100%;
-    text-align: center;
+    height: 40px;
     font-size: 12px;
     z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 
@@ -672,8 +700,12 @@ body{
     z-index: -1;
   }
   .information-list{
-    display: flex;
     padding: 0 30px 30px 30px;
+  }
+  .information-list-link{
+    display: flex;
+    text-decoration: none;
+    color: #000000;
   }
   .information-img{
     border-radius: 5px;
@@ -721,6 +753,26 @@ body{
 
 
 
+
+
+  #information-detail{
+    display: flex;
+    padding-bottom: 100px;
+  }
+  .detail-img{
+    padding: 20px 40px;
+  }
+  .information-detail-img{
+    width: 100%;
+    border-radius: 16px;
+  }
+  .detail-text-parent{
+    padding: 20px 40px;
+  }
+  .detail-text-child{
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
 
 
 @media screen and (max-width:767px){
@@ -845,7 +897,7 @@ body{
   
   
   #course::after{
-    top: 130px;
+    top: 170px;
     left: -24px;
     font-size: 72px;
   }
@@ -976,7 +1028,7 @@ body{
   .information{
     display: block;
   }
-  .information-list{
+  .information-list-link{
     display: block;
   }
   .information-text-gp{
