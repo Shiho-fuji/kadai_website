@@ -1,6 +1,7 @@
 const mySwiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
+  effect: 'fade',
   speed: 1000,
   autoplay: {
     delay: 2500,
