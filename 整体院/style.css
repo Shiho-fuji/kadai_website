@@ -150,11 +150,10 @@ body{
   }
   .date-and-time{
     display: flex;
-    margin: 0;
+    margin: 0 20px;
     padding: 0;
   }
   .news-date{
-    margin-left: 40px;
     margin-right: 10px;
   }
   .news-day{
@@ -162,7 +161,6 @@ body{
     text-align: center;
     width: 88px;
     height: 25px;
-    margin-right: 40px;
     background-color: #468459;
     color: white;
   }
@@ -201,7 +199,6 @@ body{
     top: 520px;
     right: 0;
     z-index: -1;
-    overflow: hidden;
   }
   .concept-main-title{
     color: #468459;
@@ -285,6 +282,7 @@ body{
     position: relative;
     max-width: 800px;
     width: 100%;
+    margin: 0 auto;
   }
   .course::after{
     content: "Course";
@@ -311,10 +309,6 @@ body{
     position: absolute;
     height: auto;
     overflow: hidden;
-  }
-  .course{
-    width: 800px;
-    margin: 0 auto;
   }
   .course-title{
     text-align: center;
@@ -366,9 +360,11 @@ body{
 
 
   #kyaku{
+    padding-bottom: 100px;
+  }
+  .kyaku{
     max-width: 880px;
     width: 100%;
-    padding-bottom: 100px;
     margin: 0 auto;
   }
   .kyaku-mv{
@@ -400,9 +396,11 @@ body{
   .kyaku-voice{
     padding: 20px;
   }
+  .kyaku-img-parent{
+    text-align: center;
+  }
   .kyaku-voice-img{
     border-radius:50%;
-    margin: 0 auto;
   }
   .kyaku-name{
     font-weight: bold;
@@ -432,18 +430,22 @@ body{
   #footer{
     padding: 50px 0 0;
     background-color: #f0f5e1;
-    width: 100%;
     position: relative;
   }
-  .footer::after{
+  #footer::after{
     content: url(img/footer-topback.png);
     position: absolute;
     left: 0;
     top: -100px;
     z-index: -1;
-    width: 100%;
+    width: 100vw;
     height: auto;
     overflow: hidden;
+  }
+  .footer{
+    max-width: 1025px;
+    width: 100%;
+    margin: 0 auto;
   }
   .footer-title{
     text-align: center;
@@ -456,6 +458,8 @@ body{
   }
   .footer-left{
     padding: 0 20px;
+    max-width: 460px;
+    width: 100%;
   }
   .footer-walk{
     color: #468459;
@@ -477,7 +481,8 @@ body{
   .footer-table{
     margin-top: 15px;
     margin-bottom: 30px;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     height: 123px;
   }
   .footer-date{
@@ -496,6 +501,10 @@ body{
     background-color: #1B9240;
     color: white;
     padding: 12px;
+  }
+  .google-map{
+    max-width: 450px;
+    width: 100%;
   }
 
   .footer-header {
@@ -558,13 +567,22 @@ body{
     background-repeat: repeat-x; 
     background-position: left bottom;
   }
+  .about-mv-img-parent{
+    width: 75%;
+    position: relative;
+    margin: 0 0 0 auto;
+  }
+  .about-mv-img-parent::after{
+    content: url(img/topmv-back.png);
+    position: absolute;
+    top: -140px;
+    left: -50px;
+  }
   .about-mv-img{
     max-width: 1010px;
     height: 400px;
     position: absolute;
-    width: 75%;
-    top: 0;
-    right: 0;
+    width: 100%;
     z-index: 30;
   }
   .about-mv-back{
@@ -581,25 +599,32 @@ body{
 
 
   #flow{
-    padding: 120px 100px;
+    padding: 100px 0;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  .flow{
+    margin: 0 auto;
+    max-width: 800px;
     width: 100%;
+    height: 580px;
     position: relative;
   }
-  #flow::after{
+  .flow::after{
     content: "Flow";
     font-family: "Merriweather Sans";
     position: absolute;
     color: #DAE2C2;
     font-size: 134px;
-    top: 150px;
-    left: 50px;
+    top: 50px;
+    left: -125px;
     opacity: 25%;
     z-index: -1;
   }
   #flow::before{
     content: url(img/Union_white.png);
     position: absolute;
-    top: 350px;
+    top: 520px;
     right: 0;
     z-index: -1;
   }
@@ -617,18 +642,18 @@ body{
   }
   .flow-list{
     color: #000000;
-    padding-left: 1em;
     padding: 80px 0;
   }
   .flow-list1{
-    padding: 15px;
+    padding: 15px 5px;
+    margin-left: 1em;
   }
   .flow-main{
-    width: 35%;
+    width: 320px;
   }
   .flow-gp{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row-reverse;
   }
   .flow-img{
@@ -637,27 +662,36 @@ body{
   }
   .flow-img01{
     position: absolute;
-    top: 0;
-    left: 180px;
+    top: 61px;
+    left: 190px;
     border-radius: 5px;
-    min-width: 146px;
+    width:146px;
+    height: 146px;
   }
   .flow-img02{
-    margin-top: 50px;
+    margin-top: 120px;
     left: 0;
     border-radius: 5px;
+    width: 291px;
+    height: 379px;
   }
   .flow-img03{
     position: absolute;
-    top: 300px;
-    left: 250px;
+    top: 380px;
+    left: 255px;
     border-radius: 5px;
+    width: 145px;
+    height: 189px;
   }
 
 
   #improve{
-    width: 100%;
     margin-bottom: 100px;
+  }
+  .improve{
+    max-width: 1056px;
+    width: 100%;
+    margin: 0 auto;
   }
   .improve-title{
     font-weight: bold;
@@ -680,6 +714,9 @@ body{
   .improve-point{
     width: 30%;
   }
+  .improve-img-parent{
+    text-align: center;
+  }
   .improve-img{
     width: 270px;
     height: 270px;
@@ -700,7 +737,11 @@ body{
     padding: 100px 0;
   }
   .information{
+    max-width: 976px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
   }
   .information-top-mv{
     height: 400px;
@@ -721,13 +762,22 @@ body{
     background-repeat: repeat-x; 
     background-position: left bottom;
   }
+  .information-mv-img-parent{
+    width: 70%;
+    position: relative;
+    margin: 0 0 0 auto;
+  }
+  .information-mv-img-parent::after{
+    content: url(img/topmv-back.png);
+    position: absolute;
+    top: -140px;
+    left: -50px;
+  }
   .information-mv-img{
     max-width: 1010px;
-    max-height: 400px;
+    height: 400px;
     position: absolute;
-    width: 70%;
-    top: 0;
-    right: 0;
+    width: 100%;
     z-index: 10;
   }
   .information-mv-back{
@@ -739,6 +789,11 @@ body{
     top: -50px;
     left: -70px;
     z-index: -1;
+  }
+  .information-gp{
+    list-style: none;
+    max-width: 750px;
+    width: 100%;
   }
   .information-list{
     padding: 0 30px 30px 30px;
@@ -778,7 +833,8 @@ body{
   }
 
   .information-category{
-    width: 30%;
+    max-width: 160px;
+    width: 100%;
   }
   .category{
     font-size: 24px;
@@ -798,7 +854,11 @@ body{
 
   #information-detail{
     display: flex;
-    padding-bottom: 100px;
+    justify-content: space-between;
+    padding: 100px 0;
+    margin: 0 auto;
+    max-width: 976px;
+    width: 100%;
   }
   .detail-img{
     padding: 20px 40px;
@@ -806,6 +866,10 @@ body{
   .information-detail-img{
     width: 100%;
     border-radius: 16px;
+  }
+  .information-detail-gp{
+    max-width: 752px;
+    width: 100%;
   }
   .detail-text-parent{
     padding: 20px 40px;
@@ -816,9 +880,126 @@ body{
   }
 
 
+
+
+  #contact{
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .contact-top-mv{
+    height: 400px;
+    position: relative;
+  }
+  .contact-top-text{
+    position: absolute;
+    top: 130px;
+    left: 64px;
+    color: #468459;
+  }
+  .contact-mv-text1{
+    color: #468459;
+    font-size: 18px;
+    background-image : linear-gradient(to right, #468459
+     8px, transparent 8px);
+    background-size:  15px 1px;
+    background-repeat: repeat-x; 
+    background-position: left bottom;
+  }
+  .contact-mv-img-parent{
+    width: 70%;
+    position: relative;
+    margin: 0 0 0 auto;
+  }
+  .contact-mv-img-parent::after{
+    content: url(img/topmv-back.png);
+    position: absolute;
+    top: -140px;
+    left: -50px;
+  }
+  .contact-mv-img{
+    max-width: 1010px;
+    height: 400px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+  .contact-mv-back{
+    position: relative;
+  }
+  .contact-mv-back::after{
+    position: absolute;
+    content: url(img/about-mv-back.png);
+    top: -50px;
+    left: -70px;
+    z-index: -1;
+  }
+  
+  .content{
+    max-width: 752px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .content-title{
+    padding: 20px 0;
+    color: #0C4324;
+  }
+  .content-address{
+    padding-bottom: 20px;
+  }
+  .content-tel{
+    color: #0c4324;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .content-tel-text{
+    font-size: 17px;
+  }
+  .form-example{
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  .name,.hiragana,.tel,.email,.date,.worry,.message{
+    width: 100%;
+    border: solid 1px #000000;
+    padding: 14px 0 14px 10px;
+    margin: 20px 0;
+  }
+  .message{
+    height: 140px;
+  }
+  .worry{
+    background-image: url(img/ic_mono.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: right 10px center; 
+  }
+  select:invalid {
+    color: #787878;
+  }
+  select option {
+    color: black;
+  }
+  select option:first-child {
+    color: #787878;
+  }
+  .form-submit{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .submit-button{
+    width: 240px;
+    height: 48px;
+    text-align: center;
+    background-color: #1B9240;
+    color: white;
+    border-radius: 5px;
+  }
+
+
+
 @media screen and (max-width:767px){
   body{
-    min-width: 375px;
     margin: 0;
   }
 
@@ -869,17 +1050,33 @@ body{
   .menu {
     text-decoration: none;
     display: block;
-    margin: 0 20px;
+    height: 44px;
+    width: 256px;
+    font-size: 16px;
+    margin: 0 auto;
+    color: #0D0D0D;
+  }
+  .menu-reserve{
+    text-decoration: none;
+    display: block;
+    width: 256px;
     height: 44px;
     font-size: 16px;
+    color: white;
+    background-color: #0C4324;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 auto;
   }
   .text-menu{
     text-decoration: none;
-    margin: 20px;
+    margin: 20px 0;
+    width: 256px;
     height: 44px;
     font-size: 24px;
     font-weight: bold;
     color: #0C4324;
+    margin: 0 auto;
   }
   
 
@@ -887,10 +1084,27 @@ body{
     width: 100%;
     height: 100%;
   }
+  .swiper{
+    max-width: 555px;
+    height: 464px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 20;
+  }
+  .swiper-mv-img::after{
+    content: url(img/topmv-back-sp.png);
+    position: absolute;
+    top: 0px;
+    left: -30px;
+  }
 
 
   #news{
-    padding: 0 30px;
+    width: 320px;
+    margin: 0 auto;
+    padding: 50px 16px;
     display: block;
   }
   .news-gp{
@@ -898,7 +1112,8 @@ body{
     align-items: center; 
   }
   .date-and-time{
-    margin-right: 30px;
+    display: block;
+    margin: 0 30px 0 0;
   }
   .news-date{
     margin-left: 0;
@@ -947,7 +1162,7 @@ body{
     display: block;
   }
   .course-link{
-    margin: 30px auto;
+    margin: 0 auto;
   }
   
   
