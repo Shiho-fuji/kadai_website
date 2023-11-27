@@ -30,10 +30,30 @@
 </head>
 <body>
   <header id="header">
-    <div>
+    <div class="header-area">
       <a href="index.html">
         <img src="img/logo.png" id="logo" alt="SAMURAI整体院">
       </a>
+      <div id="nav-wrapper" class="nav-wrapper">
+        <div class="hamburger" id="js-hamburger">
+          <span class="hamburger__line hamburger__line--1"></span>
+          <span class="hamburger__line hamburger__line--2"></span>
+          <span class="hamburger__line hamburger__line--3"></span>
+        </div>
+        <nav class="sp-nav">
+          <ul>
+            <li><a id="logo" href="index.html"><img src="img/logo.png" alt="トップページに戻る"></a></li>
+            <li><p class="text-menu">メニュー</p></li>
+            <li><a href="index.html" class="hamburger-link">ホーム</a></li>
+            <li><a href="about.html" class="hamburger-link">当院について</a></li>
+            <li><a href="" class="hamburger-link">コース・料金</a></li>
+            <li><a href="information.html" class="hamburger-link">お知らせ</a></li>
+            <li><a href="" class="hamburger-link">お客様の声</a></li>
+            <li><a href="contact.html" class="hamburger-inquiry-link">ご予約・お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <div class="black-bg" id="js-black-bg"></div>
+      </div>
     </div>
     <nav class="header-nav">
       <ul class="nav-list">
@@ -42,13 +62,14 @@
         <li><a href="" class="nav-link">コース・料金</a></li>
         <li><a href="information.html" class="nav-link">お知らせ</a></li>
         <li><a href="" class="nav-link">お客様の声</a></li>
-        <li><a href="contact.html" class="nav-link inquiry-link">ご予約・お問い合わせ</a></li>
+        <li><a href="contact.html" class="inquiry-link">ご予約・お問い合わせ</a></li>
       </ul>
     </nav>
 
+
     <!-- スマホ用メニューボタン -->
-    <img id="menu-sp" src="img/SP_Menu.png" alt="ナビゲーションを開く" onclick="document.getElementById('nav-sp').style.display = 'block'">
-    <!-- スマホ用メニューボタン -->
+    <!--<img id="menu-sp" src="img/SP_Menu.png" alt="ナビゲーションを開く" onclick="document.getElementById('nav-sp').style.display = 'block'">
+    スマホ用メニューボタン
     <nav id="nav-sp">
       <img id="close" src="img/ic_filter.png" alt="ナビゲーションを閉じる" onclick="document.getElementById('nav-sp').style.display = 'none'">
       <a id="logo" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'"><img src="img/logo.png" alt="トップページに戻る"></a>
@@ -58,8 +79,8 @@
       <a class="menu" href="" onclick="document.getElementById('nav-sp').style.display = 'none'">コース・料金</a>
       <a class="menu" href="information.html" onclick="document.getElementById('nav-sp').style.display = 'none'">お知らせ</a>
       <a class="menu" href="" onclick="document.getElementById('nav-sp').style.display = 'none'">お客様の声</a>
-      <a class="menu-reserve" href="contact.html" onclick="document.getElementById('nav-sp').style.display = 'none'">ご予約・お問い合わせ</a>
-    </nav>
+      <a class="menu menu-reserve" href="contact.html" onclick="document.getElementById('nav-sp').style.display = 'none'">ご予約・お問い合わせ</a>
+    </nav>-->
   </header>
   <main>
     <div class="top-mv">
@@ -104,7 +125,7 @@
           </div>
         
           <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
 
@@ -171,7 +192,7 @@
     <section id="course">
       <div class="course">
         <div class="course-title">
-          <h2>
+          <h2 class="course-title-child">
             <img src="img/left-diagonal.png" alt="左側の斜線" class="diagonal">
             コース・料金
             <img src="img/right-diagonal.png" alt="右側の斜線" class="diagonal">
@@ -300,9 +321,13 @@
                 <th class="footer-time">●</th>
               </tr>
             </table>
-            <a href="contact.html" class="footer-link">ご予約・お問い合わせはこちらから</a>
+            <div class="footer-link-parent">
+              <a href="contact.html" class="footer-link">ご予約・お問い合わせはこちらから</a>
+            </div>
           </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6480.1377242930685!2d139.774653!3d35.699923!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188fee13660e23%3A0x77137876edf742ac!2z5L2P5Y-L5LiN5YuV55Sj56eL6JGJ5Y6f6aeF5YmN44OT44Or!5e0!3m2!1sja!2sjp!4v1700143608833!5m2!1sja!2sjp" height="450" class="google-map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="google-map-parent">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6480.1377242930685!2d139.774653!3d35.699923!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188fee13660e23%3A0x77137876edf742ac!2z5L2P5Y-L5LiN5YuV55Sj56eL6JGJ5Y6f6aeF5YmN44OT44Or!5e0!3m2!1sja!2sjp!4v1700143608833!5m2!1sja!2sjp" class="google-map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
         <div class="footer-header">
           <div class="footer-logo">
