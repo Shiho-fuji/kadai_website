@@ -524,8 +524,8 @@ body{
   .footer-table{
     margin-top: 15px;
     margin-bottom: 30px;
-    max-width: 400px;
-    width: 100%;
+    max-width: 100%;
+    width: 400px;
     height: 123px;
   }
   .footer-date{
@@ -575,6 +575,41 @@ body{
     color: #0C4324;
     padding: 10px 15px;
   }
+
+  #page_top{
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    border: #468459 solid 3px;
+    z-index: 300;
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 64px;
+    height: 64px;
+    text-decoration: none;
+  }
+  #page_top a::before{
+    content: url(img/top-backhome.png);
+    position: absolute;
+    top: 6.5px;
+    left: 6.5px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #page_top.show {
+    opacity: 0.8;
+    transform: none;
+ }
+  
   #copyright{
     background-color: #468459;
     color: white;
@@ -1490,6 +1525,34 @@ body{
     display: block;
     text-align: center;
     margin-top: 20px;
+  }
+
+
+  #page_top{
+    width: 50px;
+    height: 50px;
+  }
+  #page_top a{
+    width: 50px;
+    height: 50px;
+  }
+  #page_top a::before{
+    top: -3.5px;
+    left: -0.5px;
+  }
+  
+  #copyright{
+    background-color: #468459;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 
