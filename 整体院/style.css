@@ -247,6 +247,7 @@ body{
   .concept-main-title{
     color: #468459;
     font-weight: bold;
+    font-size: 24px;
   }
   .concept-title-img{
     vertical-align: middle;
@@ -255,6 +256,7 @@ body{
   }
   .concept-title-sub{
     color: #468459;
+    font-size: 24px;
   }
   .concept-main{
     width: 320px;
@@ -264,10 +266,10 @@ body{
     color: #468459;
     font-size: 32px;
     font-weight: bold;
-    margin: 20px 0;
+    margin: 32px 0;
   }
   .concept-example{
-    margin-top: 30px;
+    margin-top: 16px;
   }
   .concept-gp{
     display: flex;
@@ -365,7 +367,7 @@ body{
     font-weight: bold;
   }
   .course-gp{
-    padding: 50px 0;
+    padding-top: 64px;
     display: flex;
     justify-content: space-between;
   }
@@ -375,13 +377,15 @@ body{
   .course-clinical{
     font-weight: bold;
     color: #0C4324;
-    margin-top: 15px;
+    font-size: 24px;
+    margin-top: 32px;
   }
   .course-list{
-    margin: 25px 30px;
+    margin: 0 32px;
   }
   .course-list1{
-    margin-top: 15px;
+    margin-top: 26px;
+    font-size: 18px;
   }
   .course-img{
     border-radius:5%;
@@ -397,18 +401,28 @@ body{
     text-decoration:none;
     color: #0C4324;
     border: 1px solid #0C4324;
-    margin: 30px auto;
+    margin: 32px auto;
     text-align: center;
   }
 
 
   #kyaku{
     padding-bottom: 100px;
+    z-index: 10;
   }
   .kyaku{
     max-width: 880px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
+  }
+  .kyaku::after{
+    content: url(img/kyaku-circle.png);
+    position: absolute;
+    top: -119px;
+    left: 0;
+    right: 0;
+    text-align: center;
   }
   .kyaku-mv{
     width: 100%;
@@ -419,17 +433,23 @@ body{
     font-weight: bold;
     text-align: center;
     color: #468459;
-    margin-bottom: 20px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    z-index: 10;
   }
   .kyaku-title-text{
     font-weight: bold;
     text-align: center;
     color: #468459;
     font-size: 24px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
   .diagonal{
     padding: 0 10px;
+    vertical-align: middle;
   }
   .kyaku-gp{
     display: flex;
@@ -441,6 +461,7 @@ body{
   }
   .kyaku-img-parent{
     text-align: center;
+    margin-bottom: 32px;
   }
   .kyaku-voice-img{
     border-radius:50%;
@@ -454,7 +475,7 @@ body{
   .kyaku-comment{
     text-align: center;
     font-size: 18px;
-    padding-top: 20px;
+    padding-top: 24px;
   }
   .kyaku-link{
     width: 178px;
@@ -466,7 +487,7 @@ body{
     background-color: white;
     border: 1px solid #0C4324;
     border-radius: 5px;
-    margin: 30px auto;
+    margin: 48px auto;
   }
 
 
@@ -703,7 +724,7 @@ body{
   #flow::before{
     content: url(img/Union_white.png);
     position: absolute;
-    top: 520px;
+    top: 450px;
     right: 0;
     z-index: -1;
   }
@@ -721,7 +742,7 @@ body{
   }
   .flow-list{
     color: #000000;
-    padding: 80px 0;
+    padding: 120px 0;
   }
   .flow-list1{
     padding: 15px 5px;
@@ -738,6 +759,7 @@ body{
   .flow-img{
     position: relative;
     width: 400px;
+    max-width: 100%;
   }
   .flow-img01{
     position: absolute;
@@ -800,6 +822,7 @@ body{
     width: 270px;
     height: 270px;
     border-radius:5px;
+    max-width: 100%;
   }
   .improve-child{
     text-align: center;
@@ -886,6 +909,7 @@ body{
     border-radius: 5px;
     width: 320px;
     height: 200px;
+    max-width: 100%;
   }
   .information-text-gp{
     padding-left: 40px;
@@ -959,6 +983,251 @@ body{
   .detail-text-child{
     padding-top: 20px;
     padding-bottom: 30px;
+  }
+
+
+
+
+  .price-top-mv{
+    height: 400px;
+    position: relative;
+  }
+  .price-top-text{
+    position: absolute;
+    top: 130px;
+    left: 64px;
+    color: #468459;
+  }
+  .price-mv-text1{
+    color: #468459;
+    font-size: 18px;
+    background-image : linear-gradient(to right, #468459
+     8px, transparent 8px);
+    background-size:  15px 1px;
+    background-repeat: repeat-x; 
+    background-position: left bottom;
+  }
+  .price-mv-img-parent{
+    width: 75%;
+    position: relative;
+    margin: 0 0 0 auto;
+  }
+  .price-mv-img-parent::after{
+    content: url(img/topmv-back.png);
+    position: absolute;
+    top: -140px;
+    left: -50px;
+  }
+  .price-mv-img{
+    max-width: 1010px;
+    height: 400px;
+    position: absolute;
+    width: 100%;
+    z-index: 30;
+  }
+  .price-mv-back{
+    position: relative;
+  }
+  .price-mv-back::after{
+    position: absolute;
+    content: url(img/about-mv-back.png);
+    top: -50px;
+    left: -70px;
+    z-index: -1;
+  }
+  #price{
+    background-color: #FAFAFA;
+    padding: 100px 0;
+    position: relative;
+  }
+  .price{
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #insurance{
+    padding: 100px;
+  }
+  .insurance{
+    margin: 0 auto;
+    max-width: 930px;
+    width: 100%;
+  }
+  .insurance-main-title{
+    color: #468459;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .insurance-title-img{
+    vertical-align: middle;
+    width: 22px;
+    height: 18px;
+  }
+  .insurance-title-sub{
+    color: #468459;
+    font-size: 24px;
+  }
+  .insurance-explain{
+    padding-top: 32px;
+  }
+  .insurance-list{
+    color: #000000;
+    padding: 16px;
+  }
+  .insurance-list1{
+    padding: 16px 0;
+    margin-left: 1em;
+  }
+  .insurance-main{
+    width: 385px;
+  }
+  .insurance-gp{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .insurance-img01{
+    width: 500px;
+    max-width: 100%;
+    height: 320px;
+    border-radius: 24px;
+  }
+
+
+  #self-pay{
+    margin-bottom: 200px;
+  }
+  .self-pay{
+    margin: 0 auto;
+    max-width: 930px;
+    width: 100%;
+  }
+  .self-pay-main-title{
+    color: #468459;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .self-pay-title-img{
+    vertical-align: middle;
+    width: 22px;
+    height: 18px;
+  }
+  .self-pay-title-sub{
+    color: #468459;
+    font-size: 24px;
+  }
+  .self-pay-explain{
+    padding-top: 32px;
+  }
+  .self-pay-list{
+    color: #000000;
+    padding: 16px;
+  }
+  .self-pay-list1{
+    padding: 16px 0;
+    margin-left: 1em;
+  }
+  .self-pay-main{
+    width: 385px;
+  }
+  .self-pay-gp{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .self-pay-img01{
+    width: 500px;
+    max-width: 100%;
+    height: 320px;
+  }
+  .self-pay-price01{
+    padding-right: 1em;
+  }
+
+
+
+  .voice-top-mv{
+    height: 400px;
+    position: relative;
+  }
+  .voice-top-text{
+    position: absolute;
+    top: 130px;
+    left: 64px;
+    color: #468459;
+  }
+  .voice-mv-text1{
+    color: #468459;
+    font-size: 18px;
+    background-image : linear-gradient(to right, #468459
+     8px, transparent 8px);
+    background-size:  15px 1px;
+    background-repeat: repeat-x; 
+    background-position: left bottom;
+  }
+  .voice-mv-img-parent{
+    width: 75%;
+    position: relative;
+    margin: 0 0 0 auto;
+  }
+  .voice-mv-img-parent::after{
+    content: url(img/topmv-back.png);
+    position: absolute;
+    top: -140px;
+    left: -50px;
+  }
+  .voice-mv-img{
+    max-width: 1010px;
+    height: 400px;
+    position: absolute;
+    width: 100%;
+    z-index: 30;
+  }
+  .voice-mv-back{
+    position: relative;
+  }
+  .voice-mv-back::after{
+    position: absolute;
+    content: url(img/about-mv-back.png);
+    top: -50px;
+    left: -70px;
+    z-index: -1;
+  }
+  #voice{
+    padding: 100px 0;
+    z-index: 10;
+  }
+  .voice{
+    max-width: 868px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .voice-gp{
+    list-style: none;
+  }
+  .voice-parent{
+    display: flex;
+    padding-bottom: 64px;
+    justify-content: space-around;
+  }
+  .voice-img{
+    width: 180px;
+    height: 180px;
+    border-radius:50%;
+  }
+  .voice-text-gp{
+    padding-left: 48px;
+  }
+  .voice-name{
+    font-weight: bold;
+    color: #0c4324;
+    font-size: 24px;
+  }
+  .voice-comment{
+    font-size: 16px;
+    padding-top: 24px;
   }
 
 
@@ -1142,7 +1411,7 @@ body{
   
   .open .hamburger__line--2 {
     opacity: 0;
-  }
+  }  
   
   .open .hamburger__line--3 {
     transform: rotate(45deg);
@@ -1154,6 +1423,7 @@ body{
     right: -100%; /*ハンバーガーがクリックされる前はWindow右側に隠す*/
     top: 0;
     width: 100%; /* 出てくるスライドメニューの幅 */
+    height: 502px;
     background-color: #fff;
     transition: all 0.5s;
     z-index: 200;
@@ -1444,13 +1714,22 @@ body{
     width: 100%;
     margin: 0 auto;
   }
+  .kyaku::after{
+    content: url(img/kyaku-circle-sp.png);
+    position: absolute;
+    top: -61px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
   .kyaku-title{
     font-size: 18px;
-    margin-bottom: 18px;
+    top: -35px;
   }
   .kyaku-title-text{
     font-size: 18px;
-    margin-bottom: 30px;
+    padding: 30px 0;
+    margin: 0;
   }
   .kyaku-gp{
     display: block;
@@ -1458,7 +1737,7 @@ body{
   .kyaku-voice{
     width: 100%;
     text-align: center;
-    padding: 30px;
+    padding-bottom: 30px;
   }
   .kyaku-name{
     padding: 10px 0;
@@ -1561,9 +1840,11 @@ body{
 
   .about-top-mv{
     height: 400px;
+    overflow: hidden;
   }
   .about-top-text{
     top: 280px;
+    left: 20px;
     z-index: 10;
   }
   .about-mv-img{
@@ -1656,17 +1937,19 @@ body{
 
 
   .information-top-mv{
-    height: 350px;
+    height: 400px;
+    overflow: hidden;
   }
   .information-top-text{
-    top: 350px;
+    top: 280px;
+    left: 20px;
     z-index: 10;
   }
   .information-mv-img{
     width: 100%;
   }
   .information-mv-img-parent{
-    width: 80%;
+    width: 75%;
   }
   .information-mv-img-parent::after{
     content: url(img/subtopmv-back-sp.png);
@@ -1736,11 +2019,157 @@ body{
 
 
 
+  .price-top-mv{
+    height: 400px;
+    overflow: hidden;
+  }
+  .price-top-text{
+    top: 280px;
+    left: 20px;
+    z-index: 10;
+  }
+  .price-mv-img{
+    width: 100%;
+  }
+  .price-mv-img-parent{
+    width: 80%;
+  }
+  .price-mv-img-parent::after{
+    content: url(img/subtopmv-back-sp.png);
+    top: 0;
+    left: -40px;
+  }
+  .price-top-text{
+    top: 251px;
+    left: 20px;
+  }
+  .price{
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 10;
+  }
+
+  .insurance{
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .insurance-title{
+    padding-top: 32px;
+  }
+  .insurance-title-sub{
+    color: #468459;
+    font-size: 18px;
+  }
+  .insurance-explain{
+    display: none;
+  }
+  .insurance-main{
+    width: 320px;
+  }
+  .insurance-gp{
+    display: block;
+  }
+  .insurance-img01{
+    width: 288px;
+    max-width: 100%;
+    height: 160px;
+    border-radius: 16px;
+  }
+
+  .self-pay{
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .self-pay-title{
+    padding-top: 32px;
+  }
+  .self-pay-title-sub{
+    font-size: 18px;
+  }
+  .self-pay-explain{
+    display: none;
+  }
+  .self-pay-main{
+    width: 320px;
+  }
+  .self-pay-gp{
+    display: block;
+  }
+  .self-pay-img01{
+    width: 288px;
+    max-width: 100%;
+    height: 160px;
+    border-radius: 16px;
+  }
+  .self-pay-price{
+    padding-bottom: 16px;
+  }
+  .self-pay-price02{
+    display: block;
+  }
+
+
+
+
+  .voice-top-mv{
+    height: 400px;
+    overflow: hidden;
+  }
+  .voice-top-text{
+    top: 280px;
+    left: 20px;
+    z-index: 10;
+  }
+  .voice-mv-img{
+    width: 100%;
+  }
+  .voice-mv-img-parent{
+    width: 80%;
+  }
+  .voice-mv-img-parent::after{
+    content: url(img/subtopmv-back-sp.png);
+    top: 0;
+    left: -40px;
+  }
+  .voice{
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 10;
+    padding: 50px 0;
+  }
+  .voice-parent{
+    display: block;
+    padding-bottom: 64px;
+  }
+  .voice-img-parent{
+    text-align: center;
+  }
+  .voice-img{
+    max-width: 100%;
+  }
+  .voice-text-gp{
+    padding-left: 0px;
+  }
+  .voice-name{
+    text-align: center;
+    padding-top: 16px;
+  }
+
+
+
+
+
   .contact-top-mv{
-    height: 350px;
+    height: 400px;
+    overflow: hidden;
   }
   .contact-top-text{
-    top: 350px;
+    top: 280px;
+    left: 20px;
     z-index: 10;
   }
   .contact-mv-img{
