@@ -36,9 +36,24 @@ window.onload = function () {
   blackBg.addEventListener('click', function () {
       nav.classList.remove('open');
   });
+
+  let Animation = function() {
+    //アイコン位置取得
+    let pageTop =  document.getElementById('page_top');
+  
+    //要素の位置座標を取得
+    let rect = pageTop.getBoundingClientRect();
+    //topからの距離
+    let scrollTop = rect.top + window.pageYOffset;
+  
+    if(scrollTop > 1000){
+      pageTop.classList.add('show');
+     }  else {
+      pageTop.classList.remove('show');
+     }
+   }
+      window.addEventListener('scroll', Animation);
 };
-
-
 
 window.addEventListener("scroll", function () {
   // ヘッダーを変数の中に格納する
@@ -48,22 +63,3 @@ window.addEventListener("scroll", function () {
 });
 
 
-
-window.onload=function(){
-  let Animation = function() {
-  //アイコン位置取得
-  let pageTop =  document.getElementById('page_top');
-
-  //要素の位置座標を取得
-  let rect = pageTop.getBoundingClientRect();
-  //topからの距離
-  let scrollTop = rect.top + window.pageYOffset;
-
-  if(scrollTop > 1000){
-    pageTop.classList.add('show');
-   }  else {
-    pageTop.classList.remove('show');
-   }
- }
-    window.addEventListener('scroll', Animation);
-}

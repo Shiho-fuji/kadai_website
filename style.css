@@ -1327,7 +1327,7 @@ body{
   
   .open .hamburger__line--2 {
     opacity: 0;
-  }
+  }  
   
   .open .hamburger__line--3 {
     transform: rotate(45deg);
@@ -1339,6 +1339,7 @@ body{
     right: -100%; /*ハンバーガーがクリックされる前はWindow右側に隠す*/
     top: 0;
     width: 100%; /* 出てくるスライドメニューの幅 */
+    height: 502px;
     background-color: #fff;
     transition: all 0.5s;
     z-index: 200;
@@ -1758,6 +1759,7 @@ body{
   }
   .about-top-text{
     top: 280px;
+    left: 20px;
     z-index: 10;
   }
   .about-mv-img{
@@ -1854,6 +1856,7 @@ body{
   }
   .information-top-text{
     top: 350px;
+    left: 20px;
     z-index: 10;
   }
   .information-mv-img{
@@ -1949,6 +1952,9 @@ body{
     width: 100%;
     margin: 0 auto;
   }
+  .insurance-title{
+    padding-top: 32px;
+  }
   .insurance-title-sub{
     color: #468459;
     font-size: 18px;
@@ -1973,6 +1979,9 @@ body{
     max-width: 320px;
     width: 100%;
     margin: 0 auto;
+  }
+  .self-pay-title{
+    padding-top: 32px;
   }
   .self-pay-title-sub{
     font-size: 18px;
@@ -2003,6 +2012,7 @@ body{
   }
   .contact-top-text{
     top: 350px;
+    left: 20px;
     z-index: 10;
   }
   .contact-mv-img{
