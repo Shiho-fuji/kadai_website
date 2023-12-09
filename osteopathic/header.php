@@ -48,7 +48,7 @@
             <li><a href="/" class="hamburger-link">ホーム</a></li>
             <li><a href="<?php echo home_url(); ?>/about" class="hamburger-link">当院について</a></li>
             <li><a href="<?php echo home_url(); ?>/price" class="hamburger-link">コース・料金</a></li>
-            <li><a href="<?php echo home_url(); ?>/information" class="hamburger-link">お知らせ</a></li>
+            <li><a href="<?php echo home_url(); ?>/news" class="hamburger-link">お知らせ</a></li>
             <li><a href="<?php echo home_url(); ?>/voice" class="hamburger-link">お客様の声</a></li>
             <li><a href="<?php echo home_url(); ?>/contact" class="hamburger-inquiry-link">ご予約・お問い合わせ</a></li>
           </ul>
@@ -61,7 +61,7 @@
         <li><a href="/" class="nav-link">ホーム</a></li>
         <li><a href="<?php echo home_url(); ?>/about" class="nav-link">当院について</a></li>
         <li><a href="<?php echo home_url(); ?>/price" class="nav-link">コース・料金</a></li>
-        <li><a href="<?php echo home_url(); ?>/information" class="nav-link">お知らせ</a></li>
+        <li><a href="<?php echo home_url(); ?>/category/news" class="nav-link">お知らせ</a></li>
         <li><a href="<?php echo home_url(); ?>/voice" class="nav-link">お客様の声</a></li>
         <li><a href="<?php echo home_url(); ?>/contact" class="inquiry-link">ご予約・お問い合わせ</a></li>
       </ul>

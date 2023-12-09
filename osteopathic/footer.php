@@ -65,7 +65,7 @@
               <li><a href="/" class="footer-nav-link">TOP</a></li>
               <li><a href="<?php echo home_url(); ?>/about" class="footer-nav-link">当院について</a></li>
               <li><a href="<?php echo home_url(); ?>/price" class="footer-nav-link">コース・料金</a></li>
-              <li><a href="<?php echo home_url(); ?>/information" class="footer-nav-link">お知らせ</a></li>
+              <li><a href="<?php echo home_url(); ?>/category/news" class="footer-nav-link">お知らせ</a></li>
               <li><a href="<?php echo home_url(); ?>/voice" class="footer-nav-link">お客様の声</a></li>
               <li><a href="<?php echo home_url(); ?>/contact" class="footer-nav-link">ご予約・お問い合わせ</a></li>
             </ul>

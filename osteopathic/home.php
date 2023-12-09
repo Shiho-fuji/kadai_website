@@ -58,15 +58,35 @@
           <h2 class="news-news">News</h2>
           <p class="news-know">お知らせ</p>
         </div>
+        
+          <?php
+            //取得したい投稿記事などの条件を引数として渡す
+            $args = array(
+            // 投稿タイプ
+              'post_type'      => 'post',
+              // カテゴリー名
+              'category_name' => 'news',
+              // 1ページに表示する投稿数
+              'posts_per_page' => 1,
+            );
+            // データの取得
+            $posts = get_posts($args);
+          ?>
+
+          <?php foreach($posts as $post): ?>
+          <?php setup_postdata($post); ?>
+
         <div class="news-text-gp">
           <div class="date-and-time">
-            <p class="news-date">2022/12/21</p>
+            <p class="news-date"><?php echo get_the_date(); ?></p>
             <p class="news-day">営業日時</p>
           </div>
-          <p>年末年始の営業時間について</p>
+          <p><?php the_title(); ?></p>
         </div>
+        <?php endforeach; ?>
+        <?php wp_reset_postdata(); ?>
       </div>
-      <a href="Information.html" class="news-link">→ お知らせ一覧</a>
+      <a href="<?php the_permalink (); ?>" class="news-link">→ お知らせ一覧</a>
     </section>
 
 
@@ -144,7 +164,7 @@
             </div>
           </div>
         </div>
-        <a href="" class="course-link">→ コース・料金詳細へ</a>
+        <a href="price.html" class="course-link">→ コース・料金詳細へ</a>
       </div>
     </section>
     
@@ -165,33 +185,42 @@
           <p class="kyaku-title-text">痛みの改善に加えて自分で予防<br>もできる様になりました</p>
         </div>
         <ul class="kyaku-gp">
+
+          <?php
+            //取得したい投稿記事などの条件を引数として渡す
+            $args = array(
+            // 投稿タイプ
+              'post_type'      => 'post',
+              // カテゴリー名
+              'category_name' => 'voice',
+              // 1ページに表示する投稿数
+              'posts_per_page' => 3,
+            );
+            // データの取得
+            $posts = get_posts($args);
+          ?>
+
+          <?php foreach($posts as $post): ?>
+          <?php setup_postdata($post); ?>
+
           <li class="kyaku-voice">
             <div class="kyaku-img-parent">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/Kyaku1.png" alt="お客様のお顔" class="kyaku-voice-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/<?php echo post_custom('custom_image'); ?>" alt="お客様のお顔" class="kyaku-voice-img">
             </div>
-            <p class="kyaku-name">S・K様&emsp;30代女性</p>
-            <p class="kyaku-comment">1ヶ月で腰の痛みが軽減しました。自分で自宅でできるケアも教えていただき、お任せしてよかったです。</p>
+            <p class="kyaku-name"><?php the_title(); ?></p>
+            <p class="kyaku-comment"><?php echo wp_trim_words( get_the_content(), 50, '…' ); ?></p>
           </li>
-          <li class="kyaku-voice">
-            <div class="kyaku-img-parent">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/Kyaku2.png" alt="お客様のお顔" class="kyaku-voice-img">
-            </div>
-            <p class="kyaku-name">T・M様&emsp;40代男性</p>
-            <p class="kyaku-comment">マラソンで右膝が痛むので、施術を受けています。なぜ痛みが生じるのかを身体の仕組みから教えていただき、普段の練習メニューも工夫できています。</p>
-          </li>
-          <li class="kyaku-voice">
-            <div class="kyaku-img-parent">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/Kyaku3.png" alt="お客様のお顔" class="kyaku-voice-img">
-            </div>
-            <p class="kyaku-name">S・T様&emsp;60代女性</p>
-            <P class="kyaku-comment">転倒して足を骨折したのをきっかけに、痛みの軽減と筋肉の衰えを防ぐために方針を立てていただいています。今は毎日元気に近所を散歩できています。</P>
-          </li>
+
+          <?php endforeach; ?>
+          <!-- 使用した投稿データをリセット -->
+          <?php wp_reset_postdata(); ?>
+
         </ul>
-        <a href="" class="kyaku-link">→ お客様の声一覧へ</a>
+        <a href="<?php the_permalink(); ?>" class="kyaku-link">→ お客様の声一覧へ</a>
       </div>
     </section>
   </main>
 
 
 
-  <?php wp_footer(); ?>
+  <?php get_footer(); ?>

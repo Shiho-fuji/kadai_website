@@ -1,3 +1,9 @@
+/*
+Theme Name : Osteopathic
+Description : 整骨院のwebページ
+Author : Fujiwara
+*/
+
 
 body{
   font-family: "Noto Sans JP", sans-serif;
@@ -292,6 +298,7 @@ body{
   .concept-img{
     position: relative;
     width: 400px;
+    max-width: 100%;
   }
   .concept-img01{
     position: absolute;
@@ -474,7 +481,6 @@ body{
     font-size: 24px;
   }
   .kyaku-comment{
-    text-align: center;
     font-size: 18px;
     padding-top: 24px;
   }
@@ -627,7 +633,7 @@ body{
     text-align: center;
   }
   #page_top.show {
-    opacity: 0.8;
+    opacity: 1;
     transform: none;
  }
   
@@ -1943,7 +1949,7 @@ body{
   .information-top-text{
     top: 280px;
     left: 20px;
-    z-index: 10;
+    z-index: 20;
   }
   .information-mv-img{
     width: 100%;
