@@ -214,7 +214,6 @@
 
           <?php endforeach; ?>
           <!-- 使用した投稿データをリセット -->
-          
 
         </ul>
         <a href="<?php the_permalink(); ?>" class="kyaku-link">→ お客様の声一覧へ</a>

@@ -471,7 +471,7 @@ body{
     text-align: center;
     margin-bottom: 32px;
   }
-  .kyaku-voice-img{
+  .kyaku-voice-img > img{
     border-radius:50%;
   }
   .kyaku-name{
@@ -911,7 +911,7 @@ body{
     text-decoration: none;
     color: #000000;
   }
-  .information-img{
+  .information-img > img{
     border-radius: 5px;
     width: 320px;
     height: 200px;
@@ -921,6 +921,8 @@ body{
     padding-left: 40px;
   }
   .information-title{
+    width: 368px;
+    max-width: 100%;
     font-size: 24px;
     font-weight: bold;
   }
@@ -972,7 +974,10 @@ body{
   .detail-img{
     padding: 20px 40px;
   }
-  .information-detail-img{
+  .information-detail-title{
+    color: #0C4324;
+  }
+  .information-detail-img > img{
     width: 100%;
     border-radius: 16px;
   }
@@ -980,11 +985,14 @@ body{
     max-width: 752px;
     width: 100%;
   }
-  .detail-text-title{
+  .information-detail-text-title{
     color: #0C4324;
   }
   .detail-text-parent{
     padding: 20px 40px;
+  }
+  .detail-text-parent > h2,h3,h4{
+    color: #0C4324;
   }
   .detail-text-child{
     padding-top: 20px;
@@ -1218,7 +1226,7 @@ body{
     padding-bottom: 64px;
     justify-content: space-around;
   }
-  .voice-img{
+  .voice-img > img{
     width: 180px;
     height: 180px;
     border-radius:50%;
@@ -1501,75 +1509,6 @@ body{
   }
 
 
-
-  /*#menu-sp{
-    float: right;
-    padding: 0;
-    margin: 10px 20px 0 0;
-    display: block;
-  }
-  #nav-sp {
-    background-color: white;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 450px;
-    width: 100%;
-    display: none;
-    z-index: 200;
-  }
-  #close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  #nav-sp > a {
-    display: block;
-  }
-  #nav-sp > a:link {
-    color: #0C4324;
-  }
-  #nav-sp > a:visited {
-    color: #0C4324;
-  }
-  #nav-sp > a:hover {
-    color: #0C4324;
-    text-decoration: underline;
-  }
-  #nav-sp > a:active {
-    color: #0C4324;
-  }
-  .menu {
-    text-decoration: none;
-    display: block;
-    height: 44px;
-    width: 256px;
-    font-size: 16px;
-    padding-top: 40px;
-    margin: 0 auto;
-    color: #0D0D0D;
-  }
-  .menu-reserve{
-    color: white;
-    background-color: #0C4324;
-    text-align: center;
-    border-radius: 5px;
-  }
-  .text-menu{
-    text-decoration: none;
-    padding: 20px 0;
-    width: 256px;
-    height: 44px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #0C4324;
-    margin: 0 auto;
-  }*/
-
-
-
-
-
   .mv-img{
     object-fit: cover;
   }
@@ -1744,6 +1683,9 @@ body{
     width: 100%;
     text-align: center;
     padding-bottom: 30px;
+  }
+  .kyaku-comment{
+    text-align: left;
   }
   .kyaku-name{
     padding: 10px 0;

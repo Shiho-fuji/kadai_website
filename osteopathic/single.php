@@ -28,7 +28,9 @@
           </div>
         </div>
         <div class="detail-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/<?php echo post_custom('custom_image'); ?>" alt="お知らせの投稿記事画像" class="information-detail-img">
+          <div class="information-detail-img">
+            <?php the_post_thumbnail(); ?>
+          </div>
         </div>
         <div class="detail-text-parent">
           <?php the_content(); ?>

@@ -84,9 +84,10 @@
           <p><?php the_title(); ?></p>
         </div>
         <?php endforeach; ?>
-        <?php wp_reset_postdata(); ?>
+        
       </div>
-      <a href="<?php the_permalink (); ?>" class="news-link">→ お知らせ一覧</a>
+      <a href="<?php echo home_url(); ?>/news" class="news-link">→ お知らせ一覧</a>
+      <?php wp_reset_postdata(); ?>
     </section>
 
 
@@ -185,38 +186,34 @@
           <p class="kyaku-title-text">痛みの改善に加えて自分で予防<br>もできる様になりました</p>
         </div>
         <ul class="kyaku-gp">
-
           <?php
-            //取得したい投稿記事などの条件を引数として渡す
             $args = array(
-            // 投稿タイプ
-              'post_type'      => 'post',
-              // カテゴリー名
-              'category_name' => 'voice',
-              // 1ページに表示する投稿数
-              'posts_per_page' => 3,
+              'post_type' => 'voice',// 投稿タイプを指定
+              'posts_per_page' => 3,// 表示する記事数
             );
-            // データの取得
-            $posts = get_posts($args);
-          ?>
-
-          <?php foreach($posts as $post): ?>
-          <?php setup_postdata($post); ?>
+            $voice_query = new WP_Query( $args );
+            if ( $voice_query->have_posts() ): 
+              while ( $voice_query->have_posts() ): 
+                $voice_query->the_post(); 
+            ?>
 
           <li class="kyaku-voice">
             <div class="kyaku-img-parent">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/<?php echo post_custom('custom_image'); ?>" alt="お客様のお顔" class="kyaku-voice-img">
+              <div class="kyaku-voice-img">
+                <?php the_post_thumbnail(); ?>
+              </div>
             </div>
             <p class="kyaku-name"><?php the_title(); ?></p>
             <p class="kyaku-comment"><?php echo wp_trim_words( get_the_content(), 50, '…' ); ?></p>
           </li>
 
-          <?php endforeach; ?>
-          <!-- 使用した投稿データをリセット -->
-          <?php wp_reset_postdata(); ?>
+            <?php endwhile;
+            endif;
+            wp_reset_postdata();
+            ?>
 
         </ul>
-        <a href="<?php the_permalink(); ?>" class="kyaku-link">→ お客様の声一覧へ</a>
+        <a href="<?php echo home_url(); ?>/voice" class="kyaku-link">→ お客様の声一覧へ</a>
       </div>
     </section>
   </main>
