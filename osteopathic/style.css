@@ -1363,6 +1363,44 @@ body{
 
 
 
+  #complete{
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .complete{
+    max-width: 752px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .frame-line{
+    text-align: center;
+    border: #cccccc solid 1px;
+    padding: 62px 0;
+  }
+  .complete-text{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .complete-explain{
+    padding: 28px 0;
+  }
+  .complete-back{
+    display: block;
+    width: 240px;
+    height: 48px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration:none;
+    margin: 0 auto;
+    padding: 12px 0;
+    background-color: #1B9240;
+    color: white;
+  }
+
+
+
+
+
 @media screen and (max-width:767px){
   body{
     margin: 0;

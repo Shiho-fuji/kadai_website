@@ -47,7 +47,7 @@
               </tr>
             </table>
             <div class="footer-link-parent">
-              <a href="contact.html" class="footer-link">ご予約・お問い合わせはこちらから</a>
+              <a href="<?php echo home_url(); ?>/contact" class="footer-link">ご予約・お問い合わせはこちらから</a>
             </div>
           </div>
           <div class="google-map-parent">
@@ -56,7 +56,7 @@
         </div>
         <div class="footer-header">
           <div class="footer-logo">
-            <a href="index.html">
+            <a href="/">
               <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" class="logo" alt="SAMURAI整体院">
             </a>
           </div>
@@ -75,8 +75,8 @@
     </div>
     <div id="page_top"><a href="#"></a></div>
     <span id="copyright">&copy;2023 SAMURAI整体院</span>
+    <?php wp_footer(); ?>
   </footer>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/index.js"></script>
-  <?php wp_footer(); ?>
 </body>
 </html>
