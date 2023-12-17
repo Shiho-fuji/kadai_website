@@ -123,7 +123,7 @@
               </p>
             </div>
             <div>
-              <a href="about.html" class="concept-link">→ 当院について</a>
+              <a href="<?php echo home_url(); ?>/about" class="concept-link">→ 当院について</a>
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@
             </div>
           </div>
         </div>
-        <a href="price.html" class="course-link">→ コース・料金詳細へ</a>
+        <a href="<?php echo home_url(); ?>/price" class="course-link">→ コース・料金詳細へ</a>
       </div>
     </section>
     

@@ -1062,7 +1062,7 @@ body{
   }
 
   #insurance{
-    padding: 100px;
+    padding: 100px 0;
   }
   .insurance{
     margin: 0 auto;
@@ -1110,6 +1110,7 @@ body{
   }
 
 
+
   #self-pay{
     margin-bottom: 200px;
   }
@@ -1155,6 +1156,7 @@ body{
     width: 500px;
     max-width: 100%;
     height: 320px;
+    border-radius: 24px;
   }
   .self-pay-price01{
     padding-right: 1em;
